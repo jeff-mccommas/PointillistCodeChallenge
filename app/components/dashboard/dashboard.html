@@ -1,0 +1,34 @@
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-8" id="chartContainer">
+      <explorer-chart graph-data="dashboard.graphData" settings="dashboard.settings"  chart-api="dashboard.chartApi">
+      </explorer-chart>
+  </div>
+  <div class="col-md-4">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Chart type</label>
+        <select class="form-control" ng-model="dashboard.settings.graph" ng-change="dashboard.init()" ng-options="app as app.value for app in mainCtrl.Config.List.Graph | filter:{ active : true }">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Cohort</label>
+        <select class="form-control" ng-model="dashboard.settings.cohort" ng-change="dashboard.init()" ng-options="app as app.value for app in mainCtrl.Config.List.Cohort">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Statistic</label>
+        <select class="form-control" ng-model="dashboard.settings.stat" ng-change="dashboard.init()" ng-options="app as app.value for app in mainCtrl.Config.List.Statistic">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Order By</label>
+        <select class="form-control" ng-model="dashboard.settings.order" ng-change="dashboard.init()" ng-options="app as app.value for app in mainCtrl.Config.List.OrderBy">
+        </select>
+      </div>
+      <button type="submit"  ng-click="dashboard.exportgraph()" class="btn btn-primary">Export to PNG</button>
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,137 @@
+text {
+     font: 10px sans-serif;
+ }
+
+
+ text.value{
+     font-size: 200%;
+     fill: white;
+ }
+
+ text.label{
+     font-size: 100%;
+ }
+
+ .axis text {
+     font: 10px sans-serif;
+ }
+
+ .axis path{
+     fill: none;
+     stroke: #000;
+     opacity: 0.2
+ }
+
+ .axis line {
+     fill: none;
+     stroke: #000;
+     shape-rendering: crispEdges;
+ }
+
+ .axis .tick line {
+     stroke-width: 1;
+     stroke: rgba(0, 0, 0, 0.2);
+ }
+ .x.axis path {
+       display: none;
+   }
+.line {
+    fill: none;
+    stroke: rgb(82, 170, 231);
+    stroke-width: 3;
+}
+.line-area{
+  fill: rgb(82, 170, 231);
+  opacity: 0.6;
+}
+.dot {
+    fill: #fff;
+    stroke: rgb(82, 170, 231);
+    stroke-width:3px;
+}
+.dot:hover {
+    fill: rgb(82, 170, 231);
+    stroke: rgb(82, 170, 231);
+    stroke-width:6px;
+}
+
+.bar {
+  /*fill: rgb(31, 119, 180);*/
+  fill-opacity: 0.8;
+}
+
+.bar:hover {
+  fill-opacity: 1;
+}
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  /*stroke: #000;*/
+  stroke-width: 0px;
+  fill-opacity: 0.8;
+}
+.arc path:hover {
+  fill-opacity: 1;
+  stroke-width: 3px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgb(82, 170, 231);
+  color: #fff;
+  border: #000;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  border: #000;
+  color: rgb(82, 170, 231);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px 0;
+  top: -8px;
+  left: 0;
+  text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 -1px;
+  top: 50%;
+  left: 100%;
+}
